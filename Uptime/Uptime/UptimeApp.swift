@@ -23,7 +23,9 @@ struct UptimeApp: App {
 
     private func menuBarIcon(_ engine: CycleEngine) -> String {
         switch engine.trackingMode {
-        case .active:   return engine.isStanding ? "figure.stand" : "figure.seated.side"
+        case .active:
+            if engine.goalReached { return "checkmark.circle.fill" }
+            return engine.isStanding ? "figure.stand" : "figure.seated.side"
         case .paused:   return "pause.circle"
         case .away:     return "figure.walk"
         case .dayEnded: return "moon"
