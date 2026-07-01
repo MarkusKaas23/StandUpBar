@@ -86,7 +86,7 @@ private struct StageCard: View {
 
                 VStack(spacing: 4) {
                     CharacterView(stage: stage)
-                        .frame(width: 72, height: 88)
+                        .frame(width: 80, height: 80)
                         .opacity(isUnlocked ? 1.0 : 0.30)
                         .overlay(
                             Group {
